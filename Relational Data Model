@@ -1,0 +1,52 @@
+# Relational Data Model
+
+The Relational Data Model is one of the most widely used data models in database management systems (DBMS). It organizes data into tables (called relations), where each table consists of rows and columns. This model is the foundation of SQL (Structured Query Language), used to query and manipulate data stored in relational databases.
+
+## 1. Concept of Relations
+
+A relation (also known as a table) is a two-dimensional structure that represents data in rows and columns:
+- **Rows** represent individual records or tuples.
+- **Columns** represent attributes or fields.
+
+Each row in the table corresponds to a real-world entity or object, and each column represents a property or characteristic of that entity.
+
+### Example:
+A `Student` relation might look like this:
+
+| Student_ID | Name    | Age | Major            |
+|------------|---------|-----|------------------|
+| 1          | Alice   | 21  | Computer Science |
+| 2          | Bob     | 22  | Mathematics      |
+| 3          | Charlie | 20  | Physics          |
+
+## 2. Schema-Instance Distinction
+
+- **Schema:**  
+  The schema represents the structure or design of a database, including the tables, fields, and relationships between tables. It is essentially the blueprint of how data is organized and remains fixed.
+
+  **Example Schema:**
+  ```sql
+  Student(Student_ID, Name, Age, Major)
+
+Instance:
+An instance refers to the actual data or records stored in a database at any given time. The instance changes over time as data is inserted, updated, or deleted.
+3. Structure of Relational Databases
+A relational database consists of multiple relations (tables) that are logically connected. Each relation contains:
+
+Attributes (Fields): Columns that describe the data.
+Tuples (Records): Rows that represent individual instances.
+
+Properties of a Relation:
+Unique Name: Each table in the database must have a unique name.
+No Duplicate Tuples: Every row in a table is unique.
+Attribute Values are Atomic: Every value in a table's cell must be indivisible (no composite or multi-valued attributes).
+
+Domains
+A domain defines the set of permissible values that an attribute can take. Each attribute in a relation is associated with a domain, specifying the type of allowed values (e.g., integers, strings, dates).
+
+Example:
+The attribute Age may have a domain of positive integers.
+The attribute Major may have a domain of valid academic programs (e.g., Computer Science, Mathematics).
+
+
+Relational Algebra Operators//upcoming 
