@@ -81,3 +81,4 @@ Difference (-):
 Retrieves rows that are present in one relation but not in the other.
 Relation1 - Relation2
 
+Cartesian Product (×): next
