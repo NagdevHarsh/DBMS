@@ -49,4 +49,31 @@ The attribute Age may have a domain of positive integers.
 The attribute Major may have a domain of valid academic programs (e.g., Computer Science, Mathematics).
 
 
-Relational Algebra Operators//upcoming 
+# Relational Algebra Operators
+
+Relational Algebra is a procedural query language used to retrieve data from a relational database. It consists of operators that take relations as input and produce new relations as output.
+
+## 5.1 Unary Operators
+
+- **Selection (σ):**  
+  Retrieves rows that satisfy a specified condition.
+
+  **Example:** Find all students with age greater than 21:  
+  ```sql
+  σ(Age > 21)(Student)
+
+Projection (π):
+Retrieves specific columns from a relation.
+
+Example: Select only Name and Major from the Student table:
+π(Name, Major)(Student)
+
+Binary Operators
+Union (U):
+Combines all rows from two relations, eliminating duplicates.
+Relation1 U Relation2
+
+Intersection (∩):
+Retrieves rows that are common to both relations.
+Relation1 ∩ Relation2
+
