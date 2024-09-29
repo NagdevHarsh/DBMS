@@ -77,3 +77,7 @@ Intersection (∩):
 Retrieves rows that are common to both relations.
 Relation1 ∩ Relation2
 
+Difference (-):
+Retrieves rows that are present in one relation but not in the other.
+Relation1 - Relation2
+
