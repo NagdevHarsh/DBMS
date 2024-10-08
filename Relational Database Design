@@ -1,0 +1,37 @@
+Relational Database Design
+Importance of a Good Schema Design
+A well-designed schema is essential for the efficiency and scalability of a database. It reduces redundancy, prevents inconsistency, ensures data integrity, and improves query performance.
+
+Problems with Bad Schema Designs
+Poor schema design can lead to:
+
+Data redundancy (storing the same data in multiple places)
+Data anomalies (insertion, deletion, and update issues)
+Complex queries that are harder to maintain and optimize
+Normal Forms and Dependency Theory
+Normalization is the process of organizing the database to reduce redundancy and improve data integrity. Functional dependencies (FDs) are key to this process.
+
+Functional Dependencies (FDs): Describe the relationship between attributes. For example, in a student table, StudentID determines StudentName (if you know the student ID, you can uniquely identify the name).
+Armstrong's Axioms: A set of rules used to infer all functional dependencies from a given set.
+Closure of FD Set and Attribute Set: The closure of an FD set is the complete set of all FDs that can be inferred from a given set of FDs.
+Irreducible Set of FDs: The minimal set of FDs that preserves all original dependencies.
+Minimal Covers: The simplest form of FDs, removing any redundant parts of the dependencies.
+Normalization Process
+Normalization is categorized into different forms (called normal forms) that guide database design to minimize redundancy.
+
+1NF (First Normal Form): Ensures that the table has atomic (indivisible) values and no repeating groups.
+2NF (Second Normal Form): Builds on 1NF by removing partial dependencies, where non-key attributes depend only on part of the primary key.
+3NF (Third Normal Form): Removes transitive dependencies, ensuring that non-key attributes depend only on the primary key.
+BCNF (Boyce-Codd Normal Form): A stricter version of 3NF, ensuring that even more complex dependency relationships are removed.
+Properties of Relational Decompositions
+When decomposing tables to eliminate redundancy:
+
+Lossless Join Decomposition: Ensures that data can be correctly reconstructed after decomposition.
+Dependency Preservation: Ensures that all functional dependencies are still enforced after decomposition.
+Advanced Normal Forms
+4NF (Fourth Normal Form): Eliminates multi-valued dependencies, ensuring that no non-trivial multi-valued dependencies exist.
+5NF (Fifth Normal Form): Removes join dependencies, ensuring the database is free from any anomalies that could occur during complex joins.
+Example of Functional Dependency:
+Suppose we have a table with StudentID, Course, and Instructor. If StudentID -> Course and Course -> Instructor, we have a transitive dependency. This violates 3NF and can be resolved by splitting the table into two: one with StudentID and Course, and another with Course and Instructor.
+
+This content outlines essential concepts for relational database design and normalization, providing a strong foundation for database management systems (DBMS) understanding.
