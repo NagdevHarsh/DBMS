@@ -1,0 +1,58 @@
+Basics of SQL
+SQL (Structured Query Language) is used to interact with relational databases, enabling users to manage and manipulate data.
+
+Data Definition Language (DDL)
+DDL is used to define and modify database schema.
+
+CREATE: Creates objects like tables, indexes, and databases.
+
+CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    Department VARCHAR(50)
+);
+
+ALTER: Modifies existing database objects.
+
+ALTER TABLE Employees 
+ADD Email VARCHAR(100);
+
+DROP: Deletes objects from the database.
+
+DROP TABLE Employees;
+
+Data Manipulation Language (DML)
+DML is used for data manipulation within the database.
+
+SELECT: Retrieves data from the database.
+
+Select * from tablename 
+
+INSERT: Adds new data.
+
+INSERT INTO Employees (EmployeeID, Name, Department) 
+VALUES (101, 'John Doe', 'HR');
+
+
+UPDATE: Modifies existing data.
+
+UPDATE Employees 
+SET Department = 'Finance' 
+WHERE EmployeeID = 101;
+
+DELETE: Removes data.
+
+DELETE FROM Employees 
+WHERE EmployeeID = 101;
+
+Data Control Language (DCL)
+DCL manages permissions and access control.
+
+GRANT: Gives users access rights.
+
+GRANT SELECT ON Employees TO 'username';
+
+REVOKE: Removes access rights.
+
+REVOKE SELECT ON Employees FROM 'username';
+
